@@ -1,0 +1,7 @@
+{
+  "name": "ionic-galeria",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
