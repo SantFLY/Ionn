@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Iniciar sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="login-container">
+    <ion-text color="primary">
+      <h1>Galería de Fotos</h1>
+      <p>Autenticación JWT</p>
+    </ion-text>
+
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input
+        type="email"
+        [(ngModel)]="email"
+        placeholder="usuario@ejemplo.com"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Contraseña</ion-label>
+      <ion-input
+        type="password"
+        [(ngModel)]="password"
+        placeholder="••••••••"
+      ></ion-input>
+    </ion-item>
+
+    <ion-text color="danger" *ngIf="error">
+      <p>{{ error }}</p>
+    </ion-text>
+
+    <ion-button
+      expand="block"
+      (click)="login()"
+      [disabled]="cargando"
+    >
+      {{ cargando ? 'Entrando...' : 'Entrar' }}
+    </ion-button>
+
+    <p class="demo-hint">
+      Modo demo: usa cualquier email y contraseña para probar.
+    </p>
+  </div>
+</ion-content>

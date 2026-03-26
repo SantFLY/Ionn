@@ -35,3 +35,11 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+/* Modal cámara: alto suficiente para ver video y botones */
+.modal-camara-fullscreen {
+  --width: 100%;
+  --max-width: 100%;
+  --height: 90%;
+  --border-radius: 12px 12px 0 0;
+}

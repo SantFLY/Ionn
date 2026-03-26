@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cámara</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cancelar()">Cancelar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <p *ngIf="error" class="error">{{ error }}</p>
+  <div *ngIf="listo && !error" class="contenedor-video">
+    <video id="video-camara" autoplay playsInline></video>
+    <div class="botones">
+      <ion-button expand="block" size="large" (click)="capturar()">
+        <ion-icon name="camera"></ion-icon>
+        Capturar foto
+      </ion-button>
+      <ion-button expand="block" fill="outline" (click)="cancelar()">
+        Cancelar
+      </ion-button>
+    </div>
+  </div>
+</ion-content>
